@@ -1,0 +1,33 @@
+body {
+    padding-top: 70px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.progress-container {
+    max-width: 400px;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
