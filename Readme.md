@@ -1,55 +1,95 @@
-# Portfolio Website
+# React Portfolio Website
 
-## Description
-This is a personal portfolio website showcasing my projects, skills, and education. The website is designed using HTML, CSS, JavaScript, and Bootstrap to ensure a responsive and visually appealing layout.
+A personal portfolio website built with React 18+, Material UI (MUI v5+), and React Router DOM v6, converted from an original HTML/CSS template.
 
 ## Features
-- Dark and Light Theme Toggle
-- Navigation bar with links (Home, Education, Projects, Skills, Contact)
-- Sidebar with profile details (collapses on mobile)
-- Cards for projects with hover effects
-- Progress bars for skill levels
-- Responsive design using Bootstrap Grid/Flexbox
-- Contact form with validation
-- Social media links (GitHub, LinkedIn, Twitter)
+
+- **Component-Based Architecture**: Well-structured components for better maintainability
+- **Dynamic Routing**: Implemented with React Router DOM v6
+- **Responsive Design**: Mobile-friendly layout that adapts to all screen sizes
+- **Material UI Components**: Uses MUI v5 for consistent UI elements
+- **Dark/Light Theme**: Toggle between dark and light modes
+- **Form Validation**: Contact form with validation using Yup
+- **Context API**: Used for managing page titles and theme
+- **Lazy Loading**: For improved performance
 
 ## Screenshots
-### Dark Mode
-![Dark Mode Screenshot](images/image.png)
 
-### Light Mode
-![Light Mode Screenshot](images/image3.png)
+### Home Page
+![Home Page](screenshots/home.png)
 
-## Live Demo
-[Portfolio Website](https://hassan252927.github.io/portfolio-2025/)
+### Projects Page
+![Projects Page](screenshots/projects.png)
+
+### Mobile View
+![Mobile View](screenshots/mobile.png)
+
+## Project Structure
+
+```
+src/
+├── App.js                # Main application component
+├── index.js              # Entry point
+├── index.css             # Global CSS
+├── components/           # Reusable UI components
+│   ├── Header.js         # AppBar with profile avatar
+│   ├── SideNav.js        # Drawer with navigation
+│   ├── Footer.js         # Footer with copyright
+│   ├── ProjectCard.js    # Card component for projects
+│   └── ContactForm.js    # Form with validation
+├── pages/                # Page components
+│   ├── Home.js           # Home page
+│   ├── Education.js      # Education details
+│   ├── Projects.js       # Projects showcase
+│   └── Contact.js        # Contact information and form
+├── context/              # React contexts
+│   └── PageTitleContext.js # Context for page titles
+└── assets/               # Static assets
+    ├── images/           # Image files
+    └── styles/           # Component-specific CSS
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/react-css-portfolio.git
+cd react-css-portfolio
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Start the development server:
+```
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Technologies Used
-- HTML5 & CSS3
-- Bootstrap 5
-- JavaScript
-- FontAwesome & Bootstrap Icons
 
-## How to Use
-1. Click on the theme toggle button to switch between light and dark modes.
-2. Navigate through different sections using the navbar.
-3. Click on project cards to visit live project demos.
-4. Contact through the provided form.
+- React 18
+- Material UI v5
+- React Router DOM v6
+- CSS for styling
+- Yup for form validation
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/hassan252927/portfolio-2025.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd portfolio-2025
-   ```
-3. Open `index.html` in a browser to view the website.
+## Best Practices Implemented
 
-## License
-This project is open-source and available under the MIT License.
-
----
-### Author
-**Muhammad Hassan Uozair**
-
+- Functional components with hooks
+- CSS variables for theming
+- Responsive design using media queries
+- Lifting state up when needed
+- Semantic HTML structure
+- Component-specific CSS
+- Lazy loading for routes

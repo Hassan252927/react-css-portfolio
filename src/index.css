@@ -1,0 +1,73 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #00ffea;
+    --secondary-color: #ff00ff;
+    --background-dark: #0a0a0a;
+    --background-light: #ffffff;
+    --text-dark: #121212;
+    --text-light: #ffffff;
+    --card-bg-dark: #1a1a1a;
+    --card-bg-light: #f5f5f5;
+  }
+  
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Theme Styling */
+  .dark-mode {
+    background-color: var(--background-dark);
+    color: var(--primary-color);
+  }
+  
+  .light-mode {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+  }
+  
+  /* Neon Text Effect */
+  .neon-text {
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+  }
+  
+  /* Container Spacing */
+  .content-container {
+    padding: 24px;
+    margin-top: 64px;
+  }
+  
+  /* Profile Image */
+  .profile-img {
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s ease-in-out;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* Main content area */
+  .main-content {
+    min-height: calc(100vh - 64px - 80px); /* viewport height minus header and footer */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Responsive breakpoints */
+  @media (max-width: 600px) {
+    .content-container {
+      padding: 16px;
+      margin-top: 56px;
+    }
+  }

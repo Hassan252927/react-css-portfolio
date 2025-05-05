@@ -1,0 +1,15 @@
+.sidenav-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+  }
+  
+  .active-nav-item {
+    background-color: rgba(0, 255, 234, 0.1) !important;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .MuiListItemIcon-root {
+    color: var(--primary-color);
+  }
