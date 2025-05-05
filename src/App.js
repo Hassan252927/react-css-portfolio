@@ -3,12 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import { Box, CssBaseline, useMediaQuery, useTheme } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-// Components
 import Header from './components/Header';
 import SideNav from './components/SideNav';
 import Footer from './components/Footer';
 
-// Lazy loaded pages
 const Home = lazy(() => import('./pages/Home'));
 const Education = lazy(() => import('./pages/Education'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -20,7 +18,6 @@ function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  // Create MUI theme based on dark/light mode
   const appTheme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',

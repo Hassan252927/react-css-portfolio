@@ -39,7 +39,6 @@ function ContactForm() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     
-    // Clear error when typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -49,26 +48,21 @@ function ContactForm() {
     e.preventDefault();
     
     try {
-      // Validate all fields
       await validationSchema.validate(formData, { abortEarly: false });
       
-      // Form is valid, proceed with submission
       setAlert({
         show: true,
         message: 'Message sent successfully!',
         severity: 'success',
       });
       
-      // Reset form
       setFormData({ name: '', email: '', message: '' });
       
-      // Hide alert after 3 seconds
       setTimeout(() => {
         setAlert((prev) => ({ ...prev, show: false }));
       }, 3000);
       
     } catch (error) {
-      // Transform yup errors into our format
       const newErrors = {};
       if (error.inner) {
         error.inner.forEach((err) => {
