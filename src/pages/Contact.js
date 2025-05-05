@@ -52,8 +52,7 @@ function Contact() {
             </Box>
             
             <Typography variant="body2" sx={{ mt: 4 }}>
-              I'm currently available for freelance work and collaborations.
-              Response time: within 24-48 hours.
+                Hello ! I'm Hassan and would like to connect with you. (^u^)
             </Typography>
           </Paper>
         </Grid>
