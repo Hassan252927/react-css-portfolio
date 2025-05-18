@@ -12,7 +12,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { usePageTitle } from '../context/PageTitleContext';
 import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
+import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import '../assets/images/styles/SideNav.css'
 
@@ -25,7 +27,9 @@ function SideNav({ open, onClose, isMobile }) {
   const navigationItems = [
     { text: 'Home', icon: <HomeIcon />, path: '/' },
     { text: 'Education', icon: <SchoolIcon />, path: '/education' },
+    { text: 'Skills', icon: <CodeIcon />, path: '/skills' },
     { text: 'Projects', icon: <WorkIcon />, path: '/projects' },
+    { text: 'Experience', icon: <BusinessCenterIcon />, path: '/experience' },
     { text: 'Contact', icon: <ContactMailIcon />, path: '/contact' }
   ];
 

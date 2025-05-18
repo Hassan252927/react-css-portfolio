@@ -9,7 +9,9 @@ import Footer from './components/Footer';
 
 const Home = lazy(() => import('./pages/Home'));
 const Education = lazy(() => import('./pages/Education'));
+const Skills = lazy(() => import('./pages/Skills'));
 const Projects = lazy(() => import('./pages/Projects'));
+const Experience = lazy(() => import('./pages/Experience'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
@@ -78,7 +80,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />
+                <Route path="/skills" element={<Skills />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/experience" element={<Experience />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </Suspense>
